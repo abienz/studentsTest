@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <title>Property page</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1.0, width=320, minimal-ui">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheeet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-latest.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+    <script src="js/slideshow.js"></script>
   </head>
   <body>
     <nav>
@@ -14,11 +18,16 @@
         <li><a href="My Property.html">My Property</a></li>
       </ul>
     </nav>
-    <article>
-      <h1>My Property, London</h1>
-      <p>2 Riding House Street, W1W 7FA</p>
+    <article class="property">
+      <div>
+        <div class="property-name">
+          <h1>My Property, London</h1>
+          <p>2 Riding House Street, W1W 7FA</p>
+        </div>
+        <div id="slides"><img src="images/propertyImage_01.jpg"><img src="images/propertyImage_02.jpg"><img src="images/propertyImage_03.jpg"></div>
+      </div>
       <section>
-        <div class="proprtyInfo">
+        <div class="property-info">
           <p class="rating">Rated Average of 4.7 by 277 students</p>
           <p class="rooms">588 Total Beds</p>
           <p class="description">
@@ -36,7 +45,7 @@
             metus vehicula quis.
           </p><a href="contact.html">Contact and expert</a>
         </div>
-        <div class="propertyRooms">
+        <div class="property-rooms">
           <h2>Room Types</h2>
           <select>
             <option value="Deluxe">Deluxe</option>
@@ -45,29 +54,29 @@
             <option value="Super Deluxe">Super Deluxe</option>
             <option value="Another room type">Another room type</option>
           </select>
-          <h3>
-            Animal Friendly Room
-            span The accommodation for pet lovers
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing 
-            elit. Mauris a nisi ultricies, hendrerit lacus non, 
-            mollis dui. Maecenas suscipit nunc ut tempus 
-            vestibulum. Morbi semper interdum purus in euismod. 
-            Ut auctor, lorem et aliquet tempor, massa elit 
-            pharetra purus, eu malesuada libero eros nec nisl.
-          </p>
-          <p>
-            In placerat, felis quis vulputate cursus, dolor 
-            mauris maximus justo, at sagittis mi lacus ut 
-            ligula. Donec elit mi, pellentesque nec lectus sed, 
-            efficitur rhoncus ex. Sed mattis condimentum mi, 
-            in tempus elit sollicitudin at. Curabitur sed arcu 
-            elit. Donec vel dolor porta, pharetra sem at, 
-            ullamcorper ligula. Ut ac rutrum justo. Duis 
-            bibendum bibendum lectus et viverra. Integer 
-            elementum dolor orci, vel lacinia sem accumsan vel.
-          </p><a class="social">Jane Doe, John Doe and 2 other frends have stayed in this room</a>
+          <article class="room">
+            <h3>Animal Friendly Room<span>The accommodation for pet lovers</span></h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing 
+              elit. Mauris a nisi ultricies, hendrerit lacus non, 
+              mollis dui. Maecenas suscipit nunc ut tempus 
+              vestibulum. Morbi semper interdum purus in euismod. 
+              Ut auctor, lorem et aliquet tempor, massa elit 
+              pharetra purus, eu malesuada libero eros nec nisl.
+            </p>
+            <p>
+              In placerat, felis quis vulputate cursus, dolor 
+              mauris maximus justo, at sagittis mi lacus ut 
+              ligula. Donec elit mi, pellentesque nec lectus sed, 
+              efficitur rhoncus ex. Sed mattis condimentum mi, 
+              in tempus elit sollicitudin at. Curabitur sed arcu 
+              elit. Donec vel dolor porta, pharetra sem at, 
+              ullamcorper ligula. Ut ac rutrum justo. Duis 
+              bibendum bibendum lectus et viverra. Integer 
+              elementum dolor orci, vel lacinia sem accumsan vel.
+            </p>
+          </article>
+          <p class="social">Jane Doe, John Doe and 2 other frends have stayed in this room</p>
           <h4>Facilities</h4>
           <ul>
             <li>Television</li>

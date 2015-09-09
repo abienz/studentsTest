@@ -6,6 +6,7 @@
     "gulp-stylus": "latest",
     "gulp-concat": "latest",
     "nib": "latest",
-    "gulp-jade": "latest"
+    "gulp-jade": "latest",
+    "gulp-data": "latest"
   }
 }

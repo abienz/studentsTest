@@ -1,8 +1,9 @@
-var gulp = require('gulp');
-var stylus = require('gulp-stylus');
-var concat = require('gulp-concat');
-var nib = require('nib');
-var jade = require('gulp-jade');
+var gulp = require('gulp'),
+		stylus = require('gulp-stylus'),
+		concat = require('gulp-concat'),
+		nib = require('nib'),
+		jade = require('gulp-jade'),
+		gdata = require('gulp-data');
 
 gulp.task('compress', function () {
   gulp.src('src/stylus/*.styl')
