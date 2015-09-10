@@ -12,10 +12,10 @@
   <body>
     <nav>
       <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Accommodations.html">Accommodations</a></li>
-        <li><a href="London.html">London</a></li>
-        <li><a href="My Property.html">My Property</a></li>
+        <li><a href="home.html">Home &gt;</a></li>
+        <li class="accommodations"><a href="accommodations.html">Accommodations &gt;</a></li>
+        <li><a href="iondon.html">London &gt;</a></li>
+        <li><a href="myProperty.html">My Property</a></li>
       </ul>
     </nav>
     <article class="property">
@@ -47,14 +47,23 @@
         </div>
         <div class="property-rooms deluxe">
           <h2>Room Types</h2>
-          <select>
-            <option value="Deluxe">Deluxe</option>
-            <option value="Shared">Shared</option>
-            <option value="Animal Friendly">Animal Friendly</option>
-            <option value="Super Deluxe">Super Deluxe</option>
-            <option value="Another room type">Another room type</option>
-          </select>
-          <article id="deluxe" class="room">
+          <aside>
+            <select>
+              <option value="deluxe">Deluxe</option>
+              <option value="shared">Shared</option>
+              <option value="animal">Animal Friendly</option>
+              <option value="super">Super Deluxe</option>
+              <option value="another">Another room type</option>
+            </select>
+            <ul>
+              <li><a href="#deluxe">Deluxe</a></li>
+              <li><a href="#shared">Shared</a></li>
+              <li><a href="#animal">Animal Friendly</a></li>
+              <li><a href="#super">Super Deluxe</a></li>
+              <li><a href="#another">Another room type</a></li>
+            </ul>
+          </aside>
+          <article id="deluxe" class="room selected">
             <h3>Deluxe Room<span>The accommodation for high rollers</span></h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing 
@@ -92,7 +101,7 @@
               <li>Sit amet</li>
             </ul>
           </article>
-          <article id="Shared" class="room">
+          <article id="shared" class="room">
             <h3>Shared Room<span>The accommodation for the family</span></h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing 
@@ -248,4 +257,5 @@
       </section>
     </article>
   </body>
+  <script src="js/Rooms.js"></script>
 </html>

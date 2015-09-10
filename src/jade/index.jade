@@ -11,10 +11,14 @@ html(lang="en")
 	body
 		nav
 			ul
-				- navigation = ['Home', 'Accommodations', 'London', 'My Property']
-				each item in navigation
-					li
-						a(href=item+'.html')= item
+				li
+					a(href='home.html') Home &gt;
+				li(class='accommodations')
+					a(href='accommodations.html') Accommodations &gt;
+				li
+					a(href='iondon.html') London &gt;
+				li
+					a(href='myProperty.html') My Property
 		article.property
 			div
 				div.property-name
@@ -45,11 +49,16 @@ html(lang="en")
 
 				div.property-rooms.deluxe
 					h2 Room Types
-					select
-						- room_types = ['Deluxe', 'Shared', 'Animal Friendly', 'Super Deluxe', 'Another room type']
-						each item in room_types
-							option(value=item)=item
-					article#deluxe.room
+					aside
+						select
+							- room_types = [{name: 'Deluxe', classname: 'deluxe'}, {name: 'Shared', classname: 'shared'}, {name: 'Animal Friendly', classname: 'animal'}, {name: 'Super Deluxe', classname: 'super'}, {name: 'Another room type', classname: 'another'}]
+							each item in room_types
+								option(value=item.classname)=item.name
+						ul
+							each item in room_types
+								li
+									a(href='#'+item.classname)= item.name
+					article#deluxe.room.selected
 						h3 Deluxe Room
 							span The accommodation for high rollers
 						p.
@@ -75,7 +84,7 @@ html(lang="en")
 							- facilities = ['Television', 'Microwave', 'Table and chairs', 'WIFI', 'Laundry', 'Dolor Sit', 'CCTV', 'Laundry', 'Dolor Sit', 'Bike Storage', 'Lorem ipsum', 'Sit amet']
 							each item in facilities
 								li=item
-					article#Shared.room
+					article#shared.room
 						h3 Shared Room
 							span The accommodation for the family
 						p.
@@ -98,6 +107,7 @@ html(lang="en")
 						p.social Jane Doe, John Doe and 2 other frends have stayed in this room
 						h4 Facilities
 						ul
+							- facilities = ['Television', 'Microwave', 'Table and chairs', 'WIFI', 'Laundry', 'Dolor Sit', 'CCTV', 'Laundry', 'Dolor Sit', 'Bike Storage', 'Lorem ipsum', 'Sit amet']
 							each item in facilities
 								li=item
 					article#animal.room
@@ -123,6 +133,7 @@ html(lang="en")
 						p.social Jane Doe, John Doe and 2 other frends have stayed in this room
 						h4 Facilities
 						ul
+							- facilities = ['Television', 'Microwave', 'Table and chairs', 'WIFI', 'Laundry', 'Dolor Sit', 'CCTV', 'Laundry', 'Dolor Sit', 'Bike Storage', 'Lorem ipsum', 'Sit amet']
 							each item in facilities
 								li=item
 					article#super.room
@@ -148,6 +159,7 @@ html(lang="en")
 						p.social Jane Doe, John Doe and 2 other frends have stayed in this room
 						h4 Facilities
 						ul
+							- facilities = ['Television', 'Microwave', 'Table and chairs', 'WIFI', 'Laundry', 'Dolor Sit', 'CCTV', 'Laundry', 'Dolor Sit', 'Bike Storage', 'Lorem ipsum', 'Sit amet']
 							each item in facilities
 								li=item
 					article#another.room
@@ -173,5 +185,7 @@ html(lang="en")
 						p.social Jane Doe, John Doe and 2 other frends have stayed in this room
 						h4 Facilities
 						ul
+							- facilities = ['Television', 'Microwave', 'Table and chairs', 'WIFI', 'Laundry', 'Dolor Sit', 'CCTV', 'Laundry', 'Dolor Sit', 'Bike Storage', 'Lorem ipsum', 'Sit amet']
 							each item in facilities
 								li=item
+	script(src='js/Rooms.js')

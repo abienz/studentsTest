@@ -1,6 +1,7 @@
 nav
 	background rgba(255, 255, 255, 0.8)
 	border-bottom 1px solid #999
+	box-shadow 0 0 4px rgba(0, 0, 0, 0.4)
 	left 0
 	position absolute
 	right 0
@@ -9,6 +10,8 @@ nav
 
 	li
 		display inline-block
+	.accommodations
+		display none
 	
 	a
 		color #333
@@ -17,3 +20,7 @@ nav
 		text-decoration none
 		&:hover
 			text-decoration underline
+
+@media screen and (min-width: 600px)
+	nav .accommodations
+		display inline-block
