@@ -51,137 +51,119 @@ html(lang="en")
 					h2 Room Types
 					aside
 						select
-							- room_types = [{name: 'Deluxe', classname: 'deluxe'}, {name: 'Shared', classname: 'shared'}, {name: 'Animal Friendly', classname: 'animal'}, {name: 'Super Deluxe', classname: 'super'}, {name: 'Another room type', classname: 'another'}]
+							- room_types = [{name: 'Deluxe', classname: 'deluxe'}, {name: 'Shared', classname: 'shared'}, {name: 'Animal Friendly', classname: 'animal-friendly'}, {name: 'Super Deluxe', classname: 'and-another'}, {name: 'Another room type', classname: 'another'}]
 							each item in room_types
 								option(value=item.classname)=item.name
 						ul
 							each item in room_types
-								li
-									a(href='#'+item.classname)= item.name
-					article#deluxe.room.selected
-						h3 Deluxe Room
-							span The accommodation for high rollers
-						p.
-							Lorem ipsum dolor sit amet, consectetur adipiscing 
-							elit. Mauris a nisi ultricies, hendrerit lacus non, 
-							mollis dui. Maecenas suscipit nunc ut tempus 
-							vestibulum. Morbi semper interdum purus in euismod. 
-							Ut auctor, lorem et aliquet tempor, massa elit 
-							pharetra purus, eu malesuada libero eros nec nisl.
-						p.
-							In placerat, felis quis vulputate cursus, dolor 
-							mauris maximus justo, at sagittis mi lacus ut 
-							ligula. Donec elit mi, pellentesque nec lectus sed, 
-							efficitur rhoncus ex. Sed mattis condimentum mi, 
-							in tempus elit sollicitudin at. Curabitur sed arcu 
-							elit. Donec vel dolor porta, pharetra sem at, 
-							ullamcorper ligula. Ut ac rutrum justo. Duis 
-							bibendum bibendum lectus et viverra. Integer 
-							elementum dolor orci, vel lacinia sem accumsan vel.
-						p.social Jane Doe, John Doe and 2 other frends have stayed in this room
-						h4 Facilities
-						ul
-							- facilities = ['Television', 'Microwave', 'Table and chairs', 'WIFI', 'Laundry', 'Dolor Sit', 'CCTV', 'Laundry', 'Dolor Sit', 'Bike Storage', 'Lorem ipsum', 'Sit amet']
-							each item in facilities
-								li=item
-					article#shared.room
-						h3 Shared Room
-							span The accommodation for the family
-						p.
-							Lorem ipsum dolor sit amet, consectetur adipiscing 
-							elit. Mauris a nisi ultricies, hendrerit lacus non, 
-							mollis dui. Maecenas suscipit nunc ut tempus 
-							vestibulum. Morbi semper interdum purus in euismod. 
-							Ut auctor, lorem et aliquet tempor, massa elit 
-							pharetra purus, eu malesuada libero eros nec nisl.
-						p.
-							In placerat, felis quis vulputate cursus, dolor 
-							mauris maximus justo, at sagittis mi lacus ut 
-							ligula. Donec elit mi, pellentesque nec lectus sed, 
-							efficitur rhoncus ex. Sed mattis condimentum mi, 
-							in tempus elit sollicitudin at. Curabitur sed arcu 
-							elit. Donec vel dolor porta, pharetra sem at, 
-							ullamcorper ligula. Ut ac rutrum justo. Duis 
-							bibendum bibendum lectus et viverra. Integer 
-							elementum dolor orci, vel lacinia sem accumsan vel.
-						p.social Jane Doe, John Doe and 2 other frends have stayed in this room
-						h4 Facilities
-						ul
-							- facilities = ['Television', 'Microwave', 'Table and chairs', 'WIFI', 'Laundry', 'Dolor Sit', 'CCTV', 'Laundry', 'Dolor Sit', 'Bike Storage', 'Lorem ipsum', 'Sit amet']
-							each item in facilities
-								li=item
-					article#animal.room
-						h3 Animal Friendly Room
-							span The accommodation for pet lovers
-						p.
-							Lorem ipsum dolor sit amet, consectetur adipiscing 
-							elit. Mauris a nisi ultricies, hendrerit lacus non, 
-							mollis dui. Maecenas suscipit nunc ut tempus 
-							vestibulum. Morbi semper interdum purus in euismod. 
-							Ut auctor, lorem et aliquet tempor, massa elit 
-							pharetra purus, eu malesuada libero eros nec nisl.
-						p.
-							In placerat, felis quis vulputate cursus, dolor 
-							mauris maximus justo, at sagittis mi lacus ut 
-							ligula. Donec elit mi, pellentesque nec lectus sed, 
-							efficitur rhoncus ex. Sed mattis condimentum mi, 
-							in tempus elit sollicitudin at. Curabitur sed arcu 
-							elit. Donec vel dolor porta, pharetra sem at, 
-							ullamcorper ligula. Ut ac rutrum justo. Duis 
-							bibendum bibendum lectus et viverra. Integer 
-							elementum dolor orci, vel lacinia sem accumsan vel.
-						p.social Jane Doe, John Doe and 2 other frends have stayed in this room
-						h4 Facilities
-						ul
-							- facilities = ['Television', 'Microwave', 'Table and chairs', 'WIFI', 'Laundry', 'Dolor Sit', 'CCTV', 'Laundry', 'Dolor Sit', 'Bike Storage', 'Lorem ipsum', 'Sit amet']
-							each item in facilities
-								li=item
-					article#super.room
-						h3 Super Delux Room
-							span The accommodation for ultra high rollers
-						p.
-							Lorem ipsum dolor sit amet, consectetur adipiscing 
-							elit. Mauris a nisi ultricies, hendrerit lacus non, 
-							mollis dui. Maecenas suscipit nunc ut tempus 
-							vestibulum. Morbi semper interdum purus in euismod. 
-							Ut auctor, lorem et aliquet tempor, massa elit 
-							pharetra purus, eu malesuada libero eros nec nisl.
-						p.
-							In placerat, felis quis vulputate cursus, dolor 
-							mauris maximus justo, at sagittis mi lacus ut 
-							ligula. Donec elit mi, pellentesque nec lectus sed, 
-							efficitur rhoncus ex. Sed mattis condimentum mi, 
-							in tempus elit sollicitudin at. Curabitur sed arcu 
-							elit. Donec vel dolor porta, pharetra sem at, 
-							ullamcorper ligula. Ut ac rutrum justo. Duis 
-							bibendum bibendum lectus et viverra. Integer 
-							elementum dolor orci, vel lacinia sem accumsan vel.
-						p.social Jane Doe, John Doe and 2 other frends have stayed in this room
-						h4 Facilities
-						ul
-							- facilities = ['Television', 'Microwave', 'Table and chairs', 'WIFI', 'Laundry', 'Dolor Sit', 'CCTV', 'Laundry', 'Dolor Sit', 'Bike Storage', 'Lorem ipsum', 'Sit amet']
-							each item in facilities
-								li=item
-					article#another.room
-						h3 Another Room
-							span The accommodation for the others...
-						p.
-							Lorem ipsum dolor sit amet, consectetur adipiscing 
-							elit. Mauris a nisi ultricies, hendrerit lacus non, 
-							mollis dui. Maecenas suscipit nunc ut tempus 
-							vestibulum. Morbi semper interdum purus in euismod. 
-							Ut auctor, lorem et aliquet tempor, massa elit 
-							pharetra purus, eu malesuada libero eros nec nisl.
-						p.
-							In placerat, felis quis vulputate cursus, dolor 
-							mauris maximus justo, at sagittis mi lacus ut 
-							ligula. Donec elit mi, pellentesque nec lectus sed, 
-							efficitur rhoncus ex. Sed mattis condimentum mi, 
-							in tempus elit sollicitudin at. Curabitur sed arcu 
-							elit. Donec vel dolor porta, pharetra sem at, 
-							ullamcorper ligula. Ut ac rutrum justo. Duis 
-							bibendum bibendum lectus et viverra. Integer 
-							elementum dolor orci, vel lacinia sem accumsan vel.
+								if item.classname == 'deluxe'
+									li
+										a(href='#'+item.classname class='selected')= item.name
+								else
+									li
+										a(href='#'+item.classname)= item.name
+					.room-container
+						article#deluxe.room.selected
+							h3 Deluxe Room
+								span The accommodation for high rollers
+							p.
+								Lorem ipsum dolor sit amet, consectetur adipiscing 
+								elit. Mauris a nisi ultricies, hendrerit lacus non, 
+								mollis dui. Maecenas suscipit nunc ut tempus 
+								vestibulum. Morbi semper interdum purus in euismod. 
+								Ut auctor, lorem et aliquet tempor, massa elit 
+								pharetra purus, eu malesuada libero eros nec nisl.
+							p.
+								In placerat, felis quis vulputate cursus, dolor 
+								mauris maximus justo, at sagittis mi lacus ut 
+								ligula. Donec elit mi, pellentesque nec lectus sed, 
+								efficitur rhoncus ex. Sed mattis condimentum mi, 
+								in tempus elit sollicitudin at. Curabitur sed arcu 
+								elit. Donec vel dolor porta, pharetra sem at, 
+								ullamcorper ligula. Ut ac rutrum justo. Duis 
+								bibendum bibendum lectus et viverra. Integer 
+								elementum dolor orci, vel lacinia sem accumsan vel.
+						article#shared.room
+							h3 Shared Room
+								span The accommodation for the family
+							p.
+								Lorem ipsum dolor sit amet, consectetur adipiscing 
+								elit. Mauris a nisi ultricies, hendrerit lacus non, 
+								mollis dui. Maecenas suscipit nunc ut tempus 
+								vestibulum. Morbi semper interdum purus in euismod. 
+								Ut auctor, lorem et aliquet tempor, massa elit 
+								pharetra purus, eu malesuada libero eros nec nisl.
+							p.
+								In placerat, felis quis vulputate cursus, dolor 
+								mauris maximus justo, at sagittis mi lacus ut 
+								ligula. Donec elit mi, pellentesque nec lectus sed, 
+								efficitur rhoncus ex. Sed mattis condimentum mi, 
+								in tempus elit sollicitudin at. Curabitur sed arcu 
+								elit. Donec vel dolor porta, pharetra sem at, 
+								ullamcorper ligula. Ut ac rutrum justo. Duis 
+								bibendum bibendum lectus et viverra. Integer 
+								elementum dolor orci, vel lacinia sem accumsan vel.
+						article#animal-friendly.room
+							h3 Animal Friendly Room
+								span The accommodation for pet lovers
+							p.
+								Lorem ipsum dolor sit amet, consectetur adipiscing 
+								elit. Mauris a nisi ultricies, hendrerit lacus non, 
+								mollis dui. Maecenas suscipit nunc ut tempus 
+								vestibulum. Morbi semper interdum purus in euismod. 
+								Ut auctor, lorem et aliquet tempor, massa elit 
+								pharetra purus, eu malesuada libero eros nec nisl.
+							p.
+								In placerat, felis quis vulputate cursus, dolor 
+								mauris maximus justo, at sagittis mi lacus ut 
+								ligula. Donec elit mi, pellentesque nec lectus sed, 
+								efficitur rhoncus ex. Sed mattis condimentum mi, 
+								in tempus elit sollicitudin at. Curabitur sed arcu 
+								elit. Donec vel dolor porta, pharetra sem at, 
+								ullamcorper ligula. Ut ac rutrum justo. Duis 
+								bibendum bibendum lectus et viverra. Integer 
+								elementum dolor orci, vel lacinia sem accumsan vel.
+						article#and-another.room
+							h3 Super Delux Room
+								span The accommodation for ultra high rollers
+							p.
+								Lorem ipsum dolor sit amet, consectetur adipiscing 
+								elit. Mauris a nisi ultricies, hendrerit lacus non, 
+								mollis dui. Maecenas suscipit nunc ut tempus 
+								vestibulum. Morbi semper interdum purus in euismod. 
+								Ut auctor, lorem et aliquet tempor, massa elit 
+								pharetra purus, eu malesuada libero eros nec nisl.
+							p.
+								In placerat, felis quis vulputate cursus, dolor 
+								mauris maximus justo, at sagittis mi lacus ut 
+								ligula. Donec elit mi, pellentesque nec lectus sed, 
+								efficitur rhoncus ex. Sed mattis condimentum mi, 
+								in tempus elit sollicitudin at. Curabitur sed arcu 
+								elit. Donec vel dolor porta, pharetra sem at, 
+								ullamcorper ligula. Ut ac rutrum justo. Duis 
+								bibendum bibendum lectus et viverra. Integer 
+								elementum dolor orci, vel lacinia sem accumsan vel.
+						article#another.room
+							h3 Another Room
+								span The accommodation for the others...
+							p.
+								Lorem ipsum dolor sit amet, consectetur adipiscing 
+								elit. Mauris a nisi ultricies, hendrerit lacus non, 
+								mollis dui. Maecenas suscipit nunc ut tempus 
+								vestibulum. Morbi semper interdum purus in euismod. 
+								Ut auctor, lorem et aliquet tempor, massa elit 
+								pharetra purus, eu malesuada libero eros nec nisl.
+							p.
+								In placerat, felis quis vulputate cursus, dolor 
+								mauris maximus justo, at sagittis mi lacus ut 
+								ligula. Donec elit mi, pellentesque nec lectus sed, 
+								efficitur rhoncus ex. Sed mattis condimentum mi, 
+								in tempus elit sollicitudin at. Curabitur sed arcu 
+								elit. Donec vel dolor porta, pharetra sem at, 
+								ullamcorper ligula. Ut ac rutrum justo. Duis 
+								bibendum bibendum lectus et viverra. Integer 
+								elementum dolor orci, vel lacinia sem accumsan vel.
+					.property-details
 						p.social Jane Doe, John Doe and 2 other frends have stayed in this room
 						h4 Facilities
 						ul

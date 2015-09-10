@@ -17,10 +17,9 @@
 		overflow hidden
 		
 		.selected
+			color #FFF
 			background #00ACF0
 			
-			a
-				color #FFF
 		
 		a
 			display block
@@ -30,7 +29,7 @@
 	
 	.social
 		position relative
-		margin 20px 0 30px 30px
+		margin 20px 0 20px 30px
 
 		&:before
 			content "\ea82"
@@ -58,8 +57,24 @@
 			display block
 			font-size 1.6rem
 	
+	h4
+		margin 20px 0
+			
+#deluxe h3:before
+	content "\e9a1"
+#shared h3:before
+	content "\e972"
+#super h3:before
+	content "\e917"
+#another h3:before
+	content "\e976"
+
+.room-container
+	height 250px
+	overflow auto
+	position relative
 	
-.room ul
+.property-details ul
 	column-count 2
 	list-style none
 	margin 20px 0 0
@@ -78,8 +93,9 @@
 
 	
 @media screen and (min-width: 600px)
-	.room
-		margin 0 0 0 250px
+	.room-container,
+	.property-details
+		margin 0 20px 0 250px
 	
 	.property-rooms aside
 		float left
