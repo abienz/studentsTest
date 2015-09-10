@@ -15,7 +15,7 @@ I went with a simple plugin to give me the slideshow with touch functionality on
 ## responsiveness
 I made a judgment call on a breakpoint of 600px to start displaying a desktop friendly version, naturally in production there would be more breakpoints.
 
-Although the CSS is designed from a mobile first perspective, there is redundant module in the ''room types'' selector and list, ideally the mobile device wouldn't have to have this overhead, and some server side feature detection could remedy this.
+Although the CSS is designed from a mobile first perspective, there is redundant module in the 'room types' selector and list, ideally the mobile device wouldn't have to have this overhead, and some server side feature detection could remedy this.
 
 ## how to get started
-To get the dev environment up and running clone the repo then run ''npm install'' this will download packages in the package.json file, then run ''gulp'' to watch any styl and jade files that may be edited.
+To get the dev environment up and running clone the repo then run 'npm install' this will download packages in the package.json file, then run 'gulp' to watch any styl and jade files that may be edited.
