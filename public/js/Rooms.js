@@ -83,4 +83,6 @@ var Rooms = {
 	}
 }
 
-Rooms.init();
+$(function(){
+	Rooms.init();
+});
